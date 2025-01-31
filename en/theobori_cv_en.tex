@@ -1,0 +1,129 @@
+\let\nofiles\relax % This is because res says to not emit aux files,
+                   % but lastpage needs aux files.
+\documentclass[margin,line]{../res}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{fourier-orns}
+\usepackage{amsmath,amssymb}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{etaremune}
+\usepackage[normalem]{ulem}
+\usepackage[style=iso]{datetime2}
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\voffset -25pt
+\headsep 25pt
+\textwidth=6.0in
+\textheight=8.9in
+\itemsep=0in
+\parsep=0in
+
+% Headings
+\pagestyle{fancy}
+\lhead{Théo BORI --- Curriculum Vitae}
+\chead{}
+\rhead{Page \thepage\ of \pageref*{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Give hyperref some metadata
+\hypersetup{pdftitle={Théo BORI — Curriculum Vitae (CV)},
+  pdfauthor={Théo BORI},
+  pdfsubject={Théo BORI's curriculum vitae (CV)},
+  pdfkeywords={computer science, unix, linux, systems, software engineering,
+    SRE, DevOps, sysadmin, development},
+  colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue
+}
+
+\begin{document}
+
+\newcommand{\myname}{Théo BORI}
+\newlength{\mynamewidth}
+\settowidth{\mynamewidth}{\namefont\myname}
+
+\name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \myname \vspace*{.1in}}
+% On the first page, have no header.
+\thispagestyle{empty}
+
+\begin{resume}
+
+	\section{\sc Contact Information}
+	\input{../contact.tex}
+
+	% Added to improve page breaks
+	\vspace{-1em}
+
+	\section{\sc Profile}
+	24-year-old student in my 5\textsuperscript{th} year at \href{https://www.epitech.eu/}{Epitech}, passionate about UNIX systems, Linux, and the open-source world. I completed my 4\textsuperscript{th} year at \href{https://www.tudublin.ie/}{Technological University Dublin} where I obtained a dual degree in data science.
+
+	\section{\sc Professional Experience}
+	 {\bf Site Reliability Engineer}, \href{https://www.vinci-autoroutes.com}{VINCI Autoroutes}, Vedène, France
+	\hfill {\it September 2024--March 2024}
+	\vspace*{.05in}
+	\begin{itemize}
+		\item Created Azure resources followed by the implementation of Backstage (AKS).
+		\item Set up infrastructure, secured access, and integrated software factory services with Backstage.
+		\item Developed automation to integrate existing projects into Gitea with Backstage.
+	\end{itemize}
+
+	{\bf Site Reliability Engineer}, \href{https://www.vinci-autoroutes.com}{VINCI Autoroutes}, Vedène, France
+	\hfill {\it April 2023--July 2023}
+	\vspace*{.05in}
+	\begin{itemize}
+		\item Automated deployment of Azure resources, NeuVector (AKS), and its configuration using Terraform.
+		\item Contributed to NeuVector source code, created a \href{https://github.com/theobori/go-neuvector}{SDK}, a \href{https://github.com/theobori/terraform-provider-neuvector}{Terraform provider}, and implemented monitoring.
+		\item Completed comprehensive documentation of NeuVector implementation.
+	\end{itemize}
+
+	{\bf Web and Mobile Developer}, \href{https://skwad.com/}{Skwad}, Montpellier, France
+	\hfill {\it July 2021--December 2021}
+	\vspace*{.05in}
+	\begin{itemize}
+		\item Maintained and continuously improved applications, fixed bugs, added features, and managed relational databases.
+		\item Developed a mobile application, including feature additions, server security, backend creation (REST API), and application containerization.
+	\end{itemize}
+
+	\section{\sc Personal Projects}
+	\href{https://github.com/theobori/tinyfilter}{Linux Packet Filtering}
+	\begin{itemize}
+		\item Utilized the Linux eBPF library to load applications into kernel space.
+	\end{itemize}
+
+	Lox Interpreters
+	\begin{itemize}
+		\item Implemented interpreters using various parsing methods and code evaluation techniques, including a \href{https://github.com/theobori/tinylox}{Tree-Walk interpreter} and a \href{https://github.com/theobori/lox-virtual-machine}{bytecode virtual machine}.
+	\end{itemize}
+
+	\href{https://github.com/theobori/tinychip}{CHIP-8 Emulator}
+	\begin{itemize}
+		\item CHIP-8 language interpreter with video and audio emulation.
+	\end{itemize}
+
+	Application Packaging
+	\begin{itemize}
+		\item Created \href{https://github.com/theobori/openbsd-ports}{ports} of X11-compatible applications and games for OpenBSD.
+		\item \href{https://repology.org/maintainer/theo1.bori@epitech.eu}{Contributed} to the Nix package collection and \href{https://github.com/theobori/nix-teeworlds}{modularized} services.
+	\end{itemize}
+
+	\href{https://github.com/theobori-cafe}{Website and Services}
+	\begin{itemize}
+		\item \href{https://theobori.cafe}{Website} where I share interesting findings and provide free \href{https://services.theobori.cafe}{services} open to everyone.
+	\end{itemize}
+
+	\section{\sc Technical Skills}
+	\textbf{Languages}: Go, Rust, TypeScript, C++/C, Python, UNIX shells, Nix(OS)\\
+	\textbf{Other}: Azure, Kubernetes, Docker, Terraform, Prometheus, Grafana
+
+\end{resume}
+\end{document}
+
+

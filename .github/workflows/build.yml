@@ -1,0 +1,30 @@
+name: build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - run: nix flake check
+      - run: nix build
+
+      - name: Commit the output file
+        run: |
+          # new branch
+          git switch --orphan pdf
+          
+          # pdf to root
+          cp result/*.pdf .
+
+          echo "This git branch is dedicated to the final PDF files." > README.md
+          
+          git add *.pdf README.md
+          git -c user.name='GitHub Action' -c user.email='action@github.com' commit -m "Final PDFs"
+          git push origin pdf -f

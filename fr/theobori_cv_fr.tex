@@ -1,0 +1,132 @@
+\let\nofiles\relax % This is because res says to not emit aux files,
+                   % but lastpage needs aux files.
+\documentclass[margin,line]{../res}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{fourier-orns}
+\usepackage{amsmath,amssymb}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{etaremune}
+\usepackage[normalem]{ulem}
+\usepackage[style=iso]{datetime2}
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\voffset -25pt
+%\topmargin -.2in
+\headsep 25pt
+\textwidth=6.0in
+\textheight=8.9in
+\itemsep=0in
+\parsep=0in
+
+% Headings
+\pagestyle{fancy}
+\lhead{Théo BORI --- Curriculum Vitae}
+\chead{}
+\rhead{\thepage\ sur \pageref*{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+% Give hyperref some metadata
+\hypersetup{pdftitle={Théo BORI — Curriculum Vitae (CV)},
+  pdfauthor={Théo BORI},
+  pdfsubject={Théo BORI's curriculum vitae (CV)},
+  pdfkeywords={informatique, unix, linux, système, ingénierie logicielle,
+    SRE, DevOps, sysadmin, développement},
+  colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue
+}
+
+\begin{document}
+
+\newcommand{\myname}{Théo BORI}
+\newlength{\mynamewidth}
+\settowidth{\mynamewidth}{\namefont\myname}
+
+\name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \myname \vspace*{.1in}}
+% On the first page, have no header.
+\thispagestyle{empty}
+
+\begin{resume}
+
+	\section{\sc Informations de contact}
+	\input{../contact.tex}
+
+
+	% Added to improve page breaks
+	\vspace{-1em}
+
+	\section{\sc Profil}
+	Étudiant de 24 ans en 5\textsuperscript{ème} année à \href{https://www.epitech.eu/}{Epitech}, passionné par les systèmes UNIX, Linux et le monde open-source. J'ai réalisé ma 4\textsuperscript{ème} année à \href{https://www.tudublin.ie/}{Technological University Dublin} où j'ai obtenu un double diplôme en data science.
+
+	\section{\sc Expérience profesionnelle}
+	 {\bf Site Reliability Engineer}, \href{https://www.vinci-autoroutes.com}{VINCI Autoroutes}, Vedène, France
+	\hfill {\it Septembre 2024--Mars 2024}
+	\vspace*{.05in}
+	\begin{itemize}
+		\item Création de ressources Azure suivie de la mise en place de Backstage (AKS).
+		\item Instanciation d'une infrastructure, sécurisation des accèss et intégrations des services de l'usine logicielle à Backstage.
+		\item \'Ecriture d'un automatisme pour intégrer les projets existants dans la forge logicielle à Backstage.
+	\end{itemize}
+
+	{\bf Site Reliability Engineer}, \href{https://www.vinci-autoroutes.com}{VINCI Autoroutes}, Vedène, France
+	\hfill {\it Avril 2023--Juillet 2023}
+	\vspace*{.05in}
+	\begin{itemize}
+		\item Déploiement automatisé des ressources dans Azure, de NeuVector (AKS) et de sa configuration avec Terraform.
+		\item Contributions au code source de NeuVector, création d'un \href{https://github.com/theobori/go-neuvector}{SDK}, d'un \href{https://github.com/theobori/terraform-provider-neuvector}{provider Terraform} et mise en place de sa supervision.
+		\item Documentation complète de la mise en oeuvre de NeuVector.
+	\end{itemize}
+
+	{\bf Développeur web et mobile}, \href{https://skwad.com/}{Skwad}, Montpellier, France
+	\hfill {\it Juillet 2021--Décembre 2021}
+	\vspace*{.05in}
+	\begin{itemize}
+		\item Maintenance et amélioration continue des applications, correction de bugs, ajout de fonctionnalités et gestion de bases de données relationnelles.
+		\item Développement d'une application mobile, comprenant l'ajout de fonctionnalités, la sécurisation des serveurs, création d'un backend (API REST) et la conteneurisation des applications.
+	\end{itemize}
+
+	\section{\sc Expérience personnelle}
+
+	\href{https://github.com/theobori/tinyfilter}{Filtrage de paquets avec Linux}
+	\begin{itemize}
+		\item Utilisation de la bibliothèque Linux eBPF qui permet de charger une application dans l'espace noyau.
+	\end{itemize}
+
+	Interpréteurs Lox
+	\begin{itemize}
+		\item Réalisation d'interpréteurs avec différentes méthodes d'analyse syntaxique et d'évaluation de code, dont un \href{https://github.com/theobori/tinylox}{interpréteur Tree-Walk} et une \href{https://github.com/theobori/lox-virtual-machine}{machine virtuelle de bytecodes}.
+	\end{itemize}
+
+
+	\href{https://github.com/theobori/tinychip}{Émulateur de CHIP-8}
+	\begin{itemize}
+		\item Interpréteur du langage CHIP-8 avec une émulation vidéo et audio.
+	\end{itemize}
+
+	Paquetage d'applications
+	\begin{itemize}
+		\item \href{https://github.com/theobori/openbsd-ports}{Portages} d'applications et de jeux compatibles avec X11 sur OpenBSD.
+		\item \href{https://repology.org/maintainer/theo1.bori@epitech.eu}{Contributions} à la collection de paquets Nix et \href{https://github.com/theobori/nix-teeworlds}{modularisation} de service.
+	\end{itemize}
+
+	\href{https://github.com/theobori-cafe}{Site web et services}
+	\begin{itemize}
+		\item \href{https://theobori.cafe}{Site web} sur lequel je partage les choses que je trouve intéressantes, je mets aussi à disposition des \href{https://services.theobori.cafe}{services} gratuits et ouverts à toutes et à tous.
+	\end{itemize}
+
+	\section{\sc Compétences informatiques}
+	\textbf{Langages}: Go, Rust, TypeScript, C++/C, Python, shells UNIX, Nix(OS)\\
+	\textbf{Autres}: Azure, Kubernetes, Docker, Terraform, Prometheus, Grafana
+
+\end{resume}
+\end{document}
