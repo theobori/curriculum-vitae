@@ -19,7 +19,7 @@ stdenvNoCC.mkDerivation {
 
   src = ./.;
 
-  buildInputs = [
+  nativeBuildInputs = [
     (texlive.combine {
       inherit (texlive)
         scheme-medium
