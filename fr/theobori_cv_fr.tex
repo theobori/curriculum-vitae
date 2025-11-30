@@ -1,5 +1,4 @@
-\let\nofiles\relax % This is because res says to not emit aux files,
-                   % but lastpage needs aux files.
+\let\nofiles\relax
 \documentclass[margin,line]{../res}
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
@@ -37,11 +36,11 @@
   pdfauthor={Théo BORI},
   pdfsubject={Théo BORI's curriculum vitae (CV)},
   pdfkeywords={informatique, unix, linux, système, ingénierie logicielle,
-    SRE, DevOps, sysadmin, développement},
+  SRE, DevOps, sysadmin, algorithmie},
   colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=blue
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=blue
 }
 
 \begin{document}
@@ -56,84 +55,175 @@
 
 \begin{resume}
 
-	\section{\sc Informations de contact}
-	\input{../contact.tex}
+  \section{\sc Informations de contact}
+  \input{../contact.tex}
 
+  % Added to improve page breaks
+  \vspace{-1em}
 
-	% Added to improve page breaks
-	\vspace{-1em}
+  \section{\sc Profil}
+  Passionné par l'écosystème UNIX et le monde open-source depuis
+  l'adolescence, je contribue régulièrement à des projets
+  communautaires. Je valorise le partage de connaissances et la
+  documentation technique rigoureuse.
 
-	\section{\sc Profil}
-	Je m'appelle Théo, j'ai 24 ans et je viens d'obtenir un diplôme d'expert en technologies de l'information après 5 ans d'études à \href{https://www.epitech.eu/}{Epitech}. J'ai réalisé ma 4\textsuperscript{ème} année à \href{https://www.tudublin.ie/}{Technological University Dublin} où j'ai obtenu un double diplôme en data science. Je suis passionné par les systèmes UNIX et le monde open-source.
+  \section{\sc Scolarité}
+  {\bf Epitech}, Montpellier, Paris, France
+  \hfill {\it Septembre 2020--Octobre 2025}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item {\it Diplôme d'Expert en Technologie de l'Information}
+  \end{itemize}
 
-	\section{\sc Expérience profesionnelle}
-	 {\bf Ingénieur DevOps \& Cloud}, \href{https://www.thalesgroup.com/fr}{Thales AVS}, Mérignac, France
-	\hfill {\it Mars 2025--Août 2025}
-	\vspace*{.05in}
-	\begin{itemize}
-		\item Mise en place de GitLab Workspaces dans un cluster Kubernetes géré par Azure (AKS).
-		\item \'Ecriture d'automatismes qui vérifient la sécurité des projets informatiques de la forge logicielle et les aident à respecter les bonnes pratiques de l'entreprise. Ces automatismes produisent des rapports de sécurité détaillés avec des graphiques intuitifs.
-		\item \'Ecriture d'un algorithme d'analyse de syntaxe pour traiter des données produite par l'éxécution de tests fonctionnels. Optimisations avec du multi-threading.
-	\end{itemize}
+  {\bf Technological University Dublin}, Dublin, Irlande
+  \hfill {\it Octobre 2023--Août 2024}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item {\it Diplôme en Science des Données}
+  \end{itemize}
 
-	{\bf Site Reliability Engineer}, \href{https://www.vinci-autoroutes.com}{VINCI Autoroutes}, Vedène, France
-	\hfill {\it Septembre 2024--Mars 2024}
-	\vspace*{.05in}
-	\begin{itemize}
-		\item Création de ressources Azure suivie de la mise en place de Backstage (AKS).
-		\item Instanciation d'une infrastructure, sécurisation des accèss et intégrations des services de l'usine logicielle à Backstage.
-		\item \'Ecriture d'un automatisme pour intégrer les projets existants dans la forge logicielle à Backstage.
-	\end{itemize}
+  \section{\sc Expériences professionnelles}
+  {\bf Stage Ingénieur DevOps \& Cloud},
+  \href{https://www.thalesgroup.com/fr}{Thales AVS}, Mérignac, France
+  \hfill {\it Mars 2025--Août 2025}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item Mise en place de GitLab Workspaces dans un cluster
+      Kubernetes géré par Azure (AKS).
+    \item Création de projets Python qui automatise la vérification
+      de la sécurité des
+      projets informatiques de la forge logicielle et les aident à
+      respecter les bonnes pratiques de l'entreprise. Ces
+      projets sont lancés depuis les pipelines CI/CD GitLab, ils
+      produisent des rapports de sécurité détaillés avec
+      un score et des graphiques intuitifs.
+    \item \'Ecriture d'un algorithme d'analyse de syntaxe pour
+      traiter des données produites par l'exécution de tests
+      fonctionnels et optimisations via du multi-threading.
+    \item Utilisation d'agents de programmation IA, dont
+      CodeCompanion, pour analyser puis sécuriser le
+      code source d'un logiciel d'exécution de tests.
+  \end{itemize}
 
-	{\bf Site Reliability Engineer}, \href{https://www.vinci-autoroutes.com}{VINCI Autoroutes}, Vedène, France
-	\hfill {\it Avril 2023--Juillet 2023}
-	\vspace*{.05in}
-	\begin{itemize}
-		\item Déploiement automatisé des ressources dans Azure, de NeuVector (AKS) et de sa configuration avec Terraform.
-		\item Contributions au code source de NeuVector, création d'un \href{https://github.com/theobori/go-neuvector}{SDK}, d'un \href{https://github.com/theobori/terraform-provider-neuvector}{provider Terraform} et mise en place de sa supervision.
-		\item Documentation complète de la mise en oeuvre de NeuVector.
-	\end{itemize}
+  {\bf Stage Site Reliability Engineer},
+  \href{https://www.vinci-autoroutes.com}{VINCI Autoroutes}, Vedène, France
+  \hfill {\it Septembre 2024--Mars 2025}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item Création de ressources Azure suivie du déploiement de
+      Backstage.io avec AKS.
+    \item Intégration des utilisateurs et des groupes existants dans Microsoft
+      Entra ID, mise en place de l'authentification avec Azure, sécurisation des accès avec un Application Gateway
+      suivi du Azure Firewall, puis intégration des services de
+      l'usine logicielle à Backstage.io.
+    \item Création d'un projet Python qui produit un CLI permettant de simplifier l'ajout de projets existants dans Backstage.io.
+  \end{itemize}
 
-	% {\bf Développeur web et mobile}, \href{https://skwad.com/}{Skwad}, Montpellier, France
-	% \hfill {\it Juillet 2021--Décembre 2021}
-	% \vspace*{.05in}
-	% \begin{itemize}
-	% 	\item Maintenance et amélioration continue des applications, correction de bugs, ajout de fonctionnalités et gestion de bases de données relationnelles.
-	% 	\item Développement d'une application mobile, comprenant l'ajout de fonctionnalités, la sécurisation des serveurs, création d'un backend (API REST) et la conteneurisation des applications.
-	% \end{itemize}
+  {\bf Stage Site Reliability Engineer},
+  \href{https://www.vinci-autoroutes.com}{VINCI Autoroutes}, Vedène, France
+  \hfill {\it Avril 2023--Juillet 2023}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item Déploiement automatisé des ressources dans Azure, de
+      NeuVector (AKS) et de sa configuration avec Terraform. La
+      surveillance a été mise en place avec Prometheus de Grafana,
+      l'ensemble de la mise en œuvre de la solution
+      a été entièrement documenté.
+    \item Contributions au code source publique de NeuVector et à celui de
+      l'exporteur Prometheus de NeuVector.
+    \item Création d'une
+      \href{https://github.com/theobori/go-neuvector}{bibliothèque}
+      en Go pour interagir avec le Controller NeuVector ainsi qu'un
+      \href{https://registry.terraform.io/providers/theobori/neuvector/latest}{provider
+      Terraform} en Go qui permet de gérer le cycle de vie des objets NeuVector.
+  \end{itemize}
 
-	\section{\sc Expérience personnelle}
+  \section{\sc Expériences personnelles notables}
 
-	\href{https://github.com/theobori/tinyfilter}{Filtrage de paquets avec Linux}
-	\begin{itemize}
-		\item Utilisation de la bibliothèque Linux eBPF qui permet de charger une application dans l'espace noyau.
-	\end{itemize}
+  {\bf Site web et services}
+  \hfill {\it Septembre 2022--Aujourd'hui}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item \href{https://theobori.cafe}{Site web} sur lequel je
+      partage les choses que je trouve intéressantes.
+    \item Mise à disposition de
+      \href{https://services.theobori.cafe}{services} gratuits et
+      ouverts à toutes et à tous. Ils sont tous conteneurisés grâce
+      à Docker et accessibles derrière NGINX, le déploiement est
+      automatisé avec un Playbook Ansible et les enregistrements DNS
+      sont gérés avec un projet Terraform. Prometheus et Grafana sont
+      utilisés pour surveiller l'état des services et du système et des
+      sauvegardes automatiques sont réalisées chaque semaine.
+      L'authentification aux services est gérée par un serveur
+      OpenLDAP et des mécanismes de blocage ont été mis en place pour
+      les tentatives d'authentification malveillantes.  Toute
+      la documentation technique et
+      les statistiques utilisateurs sont
+      \href{https://services.theobori.cafe/documentation}{disponibles
+      publiquement}.
+    \item Maintenance depuis plus d'un an d'une
+      \href{https://zettel.theobori.cafe}{base de connaissances} en
+      ligne organisée qui met à disposition toutes mes notes.
+  \end{itemize}
 
-	Interpréteurs Lox
-	\begin{itemize}
-		\item Réalisation d'interpréteurs avec différentes méthodes d'analyse syntaxique et d'évaluation de code, dont un \href{https://github.com/theobori/tinylox}{interpréteur Tree-Walk} et une \href{https://github.com/theobori/lox-virtual-machine}{machine virtuelle de bytecodes}.
-	\end{itemize}
+  {\bf Paquetage d'applications}
+  \hfill {\it Mars 2024--Aujourd'hui}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item
+      \href{https://repology.org/maintainer/theobori@disroot.org}{Contributions}
+      régulières à la collection d'expressions officielles de Nix(OS)
+      (plus d'une centaine en 2025) et
+      \href{https://github.com/theobori/nix-teeworlds}{modularisation}
+      de service.
+    \item \href{https://github.com/theobori/openbsd-ports}{Portages}
+      d'applications et de jeux compatibles avec X11 pour OpenBSD.
+  \end{itemize}
 
+  {\bf Algorithmie et structures de données}
+  \hfill {\it Décembre 2023--Aujourd'hui}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item Bases théoriques et pratiques solides en algorithmie et
+      structures de données.
+    \item \href{https://leetcode.com/u/theobori/}{Résolution} de
+      problèmes algorithmiques sur différentes plateformes dédiées et
+      complétions de l'\href{https://github.com/theobori/advent-of-code}{Advent Of Code}.
+  \end{itemize}
 
-	% \href{https://github.com/theobori/tinychip}{Émulateur de CHIP-8}
-	% \begin{itemize}
-	% 	\item Interpréteur du langage CHIP-8 avec une émulation vidéo et audio.
-	% \end{itemize}
+  {\bf Filtrage de paquets avec Linux}
+  \hfill {\it Janvier 2024--Novembre 2024}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item \'Ecriture d'un
+      \href{https://github.com/theobori/tinyfilter}{projet XDP} en C pour
+      filtrer les paquets dans l'espace noyau. Le but est d'avoir un
+      filtreur de paquets haute performance
+      chargé dans l'espace noyau, avec la possibilité de gérer des
+      règles de filtrage personnalisées pour différentes couches
+      réseau depuis l'espace utilisateur.
+  \end{itemize}
 
-	Paquetage d'applications
-	\begin{itemize}
-		\item \href{https://github.com/theobori/openbsd-ports}{Portages} d'applications et de jeux compatibles avec X11 sur OpenBSD.
-		\item \href{https://repology.org/maintainer/theobori@disroot.org}{Contributions} à la collection de paquets Nix et \href{https://github.com/theobori/nix-teeworlds}{modularisation} de service.
-	\end{itemize}
+  {\bf Interpréteurs Lox}
+  \hfill {\it Mars 2024--Novembre 2024}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item Réalisation d'interpréteurs du langage Lox en partant de
+      zéro avec différentes méthodes d'analyse syntaxique et
+      d'évaluation de code, dont un
+      \href{https://github.com/theobori/tinylox}{interpréteur
+      Tree-Walk} en Python et une
+      \href{https://github.com/theobori/lox-virtual-machine}{machine
+      virtuelle de bytecodes} en C.
+  \end{itemize}
 
-	\href{https://github.com/theobori-cafe}{Site web et services}
-	\begin{itemize}
-		\item \href{https://theobori.cafe}{Site web} sur lequel je partage les choses que je trouve intéressantes, je mets aussi à disposition des \href{https://services.theobori.cafe}{services} gratuits et ouverts à toutes et à tous, ainsi que \href{https://zettel.theobori.cafe}{mes notes}.
-	\end{itemize}
-
-	\section{\sc Compétences informatiques}
-	\textbf{Langages}: Go, Rust, TypeScript, C++/C, Python, shells UNIX, Nix(OS)\\
-	\textbf{Autres}: Azure, Kubernetes, Docker, Terraform, Prometheus, Grafana, Linux From Scratch
+  \section{\sc Langues}
+  \begingroup
+  \raggedright
+  {\bf Français}, langue maternelle\\
+  \vspace*{.05in}
+  {\bf Anglais}, parlé, lu et écrit
+  \endgroup
 
 \end{resume}
 \end{document}

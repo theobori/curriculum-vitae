@@ -4,14 +4,14 @@
   texlive,
 }:
 let
-  inherit (lib.strings) intersperse concatStrings;
+  inherit (lib.strings) concatStringsSep;
 
   langs' = [
     "fr"
     "en"
   ];
 
-  langs = concatStrings (intersperse " " langs');
+  langs = concatStringsSep " " langs';
 in
 stdenvNoCC.mkDerivation {
   pname = "curriculum-vitae";

@@ -26,7 +26,7 @@
 
         devShells = {
           default = pkgs.mkShell {
-            packages = self.packages.${system}.default.buildInputs;
+            packages = self.packages.${system}.default.nativeBuildInputs;
           };
         };
 
