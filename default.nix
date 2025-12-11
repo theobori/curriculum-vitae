@@ -36,7 +36,7 @@ stdenvNoCC.mkDerivation {
 
     for lang in ${langs}; do
       cd $lang
-      pdflatex theobori_cv_$lang.tex
+      latexmk -pdf theobori_cv_$lang.tex
       cd -
     done
 
