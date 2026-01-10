@@ -1,18 +1,8 @@
 {
-  lib,
   stdenvNoCC,
   texlive,
+  gnumake,
 }:
-let
-  inherit (lib.strings) concatStringsSep;
-
-  langs' = [
-    "fr"
-    "en"
-  ];
-
-  langs = concatStringsSep " " langs';
-in
 stdenvNoCC.mkDerivation {
   pname = "curriculum-vitae";
   version = "0.0.1";
@@ -29,16 +19,14 @@ stdenvNoCC.mkDerivation {
         datetime2
         ;
     })
+
+    gnumake
   ];
 
   buildPhase = ''
     runHook preBuild
 
-    for lang in ${langs}; do
-      cd $lang
-      latexmk -pdf theobori_cv_$lang.tex
-      cd -
-    done
+    make
 
     runHook postBuild
   '';
@@ -46,11 +34,7 @@ stdenvNoCC.mkDerivation {
   installPhase = ''
     runHook preInstall
 
-    mkdir -p $out
-
-    for lang in ${langs}; do
-      mv $lang/theobori_cv_$lang.pdf $out
-    done
+    PREFIX=$out make install
 
     runHook postInstall
   '';
