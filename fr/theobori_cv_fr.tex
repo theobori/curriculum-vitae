@@ -142,14 +142,22 @@
 
   \section{\sc Expériences personnelles notables}
 
-  {\bf Site web et services}
+  {\bf Présence numérique}
   \hfill {\it Septembre 2022--Aujourd'hui}
   \vspace*{.05in}
   \begin{itemize}
     \item \href{https://theobori.cafe}{Site web} sur lequel je
       partage les choses que je trouve intéressantes.
-    \item Mise à disposition de
-      \href{https://services.theobori.cafe}{services} gratuits et
+    \item Maintenance depuis plus d'un an d'une
+      \href{https://zettel.theobori.cafe}{base de connaissances} en
+      ligne organisée qui met à disposition toutes mes notes et mes idées.
+  \end{itemize}
+
+  {\bf Infrastructure et services}
+  \hfill {\it Septembre 2022--Septembre 2026}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item Mise à disposition de services gratuits et
       ouverts à toutes et à tous. Ils sont tous conteneurisés grâce
       à Docker et accessibles derrière NGINX, le déploiement est
       automatisé avec un Playbook Ansible et les enregistrements DNS
@@ -160,12 +168,22 @@
       OpenLDAP et des mécanismes de blocage ont été mis en place pour
       les tentatives d'authentification malveillantes.  Toute
       la documentation technique et
-      les statistiques utilisateurs sont
-      \href{https://services.theobori.cafe/documentation}{disponibles
-      publiquement}.
-    \item Maintenance depuis plus d'un an d'une
-      \href{https://zettel.theobori.cafe}{base de connaissances} en
-      ligne organisée qui met à disposition toutes mes notes.
+      les statistiques utilisateurs sont disponibles
+      publiquement. L'infrastructure a été décommissionnée en
+      septembre 2026, toutes les déclarations
+      et les automatismes associés restent publiquement disponibles
+      dans l'\href{https://github.com/theobori-cafe}{organisation
+      GitHub dédiée}.
+    \item Transformation d'une ancienne machine en
+      \href{https://github.com/theobori/homelab}{homelab personnel},
+      l'objectif est d'offrir une seconde vie au matériel
+      informatique inutilisé. Ainsi, elle est devenue une plateforme
+      privée où toutes les identitées et les accès sont gérés par
+      Authentik et les tous services sont derrière Traefik. Il y a
+      des sauvegardes automatiques, des alertes Grafana et Uptime
+      Kuma, un ensemble de services pour gérer des medias et des
+      fichiers. La majorité des détails techniques sont expliqués sur
+      \href{https://theobori.cafe/posts/homelab/}{cette page web}.
   \end{itemize}
 
   {\bf Paquetage d'applications}
@@ -175,9 +193,12 @@
     \item
       \href{https://repology.org/maintainer/theobori@disroot.org}{Contributions}
       régulières à la collection d'expressions officielles de Nix(OS)
-      (plus d'une centaine en 2025) et
+      (plus d'une centaine en 2025),
       \href{https://github.com/theobori/nix-teeworlds}{modularisation}
-      de service.
+      de service et gestion de
+      \href{https://github.com/theobori/nixos-configuration}{ma
+      configuration NixOS} modularisée
+      pour mes différentes machines.
     \item \href{https://github.com/theobori/openbsd-ports}{Portages}
       d'applications et de jeux compatibles avec X11 pour OpenBSD.
     \item \href{https://github.com/theobori/9ports}{Portages} de
@@ -194,6 +215,29 @@
       problèmes algorithmiques sur différentes plateformes dédiées et
       complétions de
       l'\href{https://github.com/theobori/advent-of-code}{Advent Of Code}.
+  \end{itemize}
+
+  {\bf Protocole Gopher}
+  \hfill {\it Juin 2026--Juillet 2026}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item \'Ecriture d'un
+      \href{https://github.com/theobori/fleur}{framework} en Go
+      permettant de construire des applications Gopher très
+      customisées compatibles avec le standard RFC 1436 et plus. Il
+      est accompagné d'un CLI qui implémente une application standard
+      grâce au framework et un module NixOS pour le mettre en service.
+    \item \'Ecriture d'une
+      \href{https://github.com/theobori/fleur-form}{extension} en Go
+      pour le framework pré-cité. Elle ajoute un mécanisme pour créer
+      des formulaires utilisateurs.
+    \item \'Ecriture d'une
+      \href{https://github.com/theobori/ange}{application Gopher} en
+      Go utilisant les deux projets pré-cités. Elle permet de gérer
+      un webring Gopher persistant, c'est-à-dire, d'ajouter, de
+      supprimer et de valider un site Gopher souhaitant rejoindre la
+      chaine. Elle permet aussi de récupérer les nœuds voisins d'un
+      nœud donné et de sélectionner un nœud au hasard.
   \end{itemize}
 
   {\bf Filtrage de paquets avec Linux}

@@ -137,27 +137,45 @@
 
   \section{\sc Notable\\ Personal\\ Projects}
 
-  {\bf Website and Services}
+  {\bf Digital presence}
   \hfill {\it September 2022--Present}
   \vspace*{.05in}
   \begin{itemize}
     \item \href{https://theobori.cafe}{Website} where I share
       things I find interesting.
-    \item Provision of
-      \href{https://services.theobori.cafe}{free services} open to
-      everyone. They are all containerized with Docker and accessible
-      behind NGINX, deployment is automated with an Ansible Playbook
-      and DNS records are managed with a Terraform project. Prometheus
-      and Grafana are used to monitor service and system status and
-      automatic backups are performed weekly. Service authentication
-      is managed by an OpenLDAP server and blocking mechanisms have
-      been implemented for malicious authentication attempts. All
-      technical documentation and user statistics are
-      \href{https://services.theobori.cafe/documentation}{publicly
-      available}.
     \item Maintenance for over a year of an organized online
       \href{https://zettel.theobori.cafe}{knowledge base} that provides
       all my notes.
+  \end{itemize}
+
+  {\bf Infrastructure and Services}
+  \hfill {\it September 2022--September 2026}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item Provision of free services open to everyone. All services
+      are containerized using Docker and accessible behind NGINX,
+      with deployment automated using an Ansible playbook and DNS
+      records managed through a Terraform project. Prometheus and
+      Grafana are used to monitor the health of the services and
+      system, and automatic backups are performed weekly.
+      Authentication to the services is managed by an OpenLDAP
+      server, with blocking mechanisms in place to prevent malicious
+      authentication attempts. All technical documentation and
+      user statistics are publicly available. The infrastructure
+      was decommissioned in September 2026, while all associated
+      configurations and automation remain publicly available in the
+      dedicated
+      \href{https://github.com/theobori-cafe}{GitHub organization}.
+    \item Transformation of an old machine into a
+      \href{https://github.com/theobori/homelab}{personal homelab},
+      with the goal of giving unused computer hardware a second life.
+      It has thus become a private platform where all identities and
+      access are managed by Authentik, and all services are exposed
+      through Traefik. It includes automatic backups, Grafana and
+      Uptime Kuma alerts, as well as a collection of services for
+      managing media and files. Most of the technical details are
+      documented on
+      \href{https://theobori.cafe/posts/homelab/}{this webpage}.
   \end{itemize}
 
   {\bf Application Packaging}
@@ -184,6 +202,29 @@
     \item \href{https://leetcode.com/u/theobori/}{Solving} algorithmic
       problems on various dedicated platforms and completing the
       \href{https://github.com/theobori/advent-of-code}{Advent Of Code}.
+  \end{itemize}
+
+  {\bf Gopher Protocol}
+  \hfill {\it June 2026--July 2026}
+  \vspace*{.05in}
+  \begin{itemize}
+    \item Development of a
+      \href{https://github.com/theobori/fleur}{framework} in Go
+      for building highly customized Gopher applications compatible
+      with the RFC 1436 standard and beyond. It comes with a CLI that
+      implements a standard application using the framework, as well
+      as a NixOS module for deploying it as a service.
+    \item Development of a
+      \href{https://github.com/theobori/fleur-form}{Go extension}
+      for the aforementioned framework, adding support for creating
+      user-facing forms.
+    \item Development of a
+      \href{https://github.com/theobori/ange}{Gopher application} in
+      Go using the two aforementioned projects. It provides a
+      persistent Gopher webring, allowing users to add, remove, and
+      validate Gopher sites wishing to join the chain. It also allows
+      retrieving the neighboring nodes of a given node and selecting
+      a node at random.
   \end{itemize}
 
   {\bf Packet Filtering with Linux}
